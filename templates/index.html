@@ -168,7 +168,7 @@
         </p>
       </div>
 
-      <form class="subscribe__form js-subscribe" action="{{ url_for('subscribe') }}" method="post" novalidate>
+      <form class="subscribe__form js-subscribe" action="{{ url_for('subscribe') }}"{% if static_version %} data-static="1"{% endif %} method="post" novalidate>
         <label class="sr-only" for="email">Электронная почта</label>
         <div class="field">
           <input id="email" name="email" type="email" inputmode="email" autocomplete="email"

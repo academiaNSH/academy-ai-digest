@@ -88,6 +88,17 @@
     var button = form.querySelector("button");
     var message = form.querySelector(".form-msg");
 
+    /* На GitHub Pages нет сервера: честно говорим об этом вместо ошибки сети */
+    if (form.dataset.static === "1") {
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        message.classList.remove("is-ok", "is-error");
+        message.textContent =
+          "Это статическая версия сайта: подписка работает в версии на Flask.";
+      });
+      return;
+    }
+
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 

@@ -56,10 +56,10 @@ def subscribe():
         return jsonify(ok=False, message="Похоже, в адресе ошибка. Проверь и попробуй снова."), 400
 
     if email.lower() in [item.lower() for item in SUBSCRIBERS]:
-        return jsonify(ok=True, message="Этот адрес уже в списке — дайджест придёт в пятницу.")
+        return jsonify(ok=True, message="Этот адрес уже в списке — дайджест приходит раз в месяц.")
 
     SUBSCRIBERS.append(email)
-    return jsonify(ok=True, message="Готово! Первый выпуск придёт в ближайшую пятницу.")
+    return jsonify(ok=True, message="Готово! Первый выпуск придёт в начале следующего месяца.")
 
 
 @app.errorhandler(404)

@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block title %}Академия начальной школы — AI-дайджест для новичков{% endblock %}
+{% block description %}AI-дайджест Академии начальной школы: 10 коротких материалов про ИИ для новичков — как это работает, чем пользоваться и где подвох.{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="shell hero__inner">
+    <div class="hero__copy">
+      <span class="eyebrow reveal">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        Выпуск №1 · ноябрь
+      </span>
+
+      <h1 class="hero__title">
+        Искусственный интеллект
+        <span class="grad">без воды</span>
+        и страха
+      </h1>
+
+      <p class="hero__lead">
+        Десять коротких материалов, которые объясняют ИИ по-человечески:
+        что это, как пользоваться и где подвох. Читается за вечер,
+        применяется на следующий день.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#cards">
+          Начать читать
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+        <a class="btn btn--ghost" href="#subscribe">Получать выпуски</a>
+      </div>
+
+      <ul class="stats">
+        <li>
+          <strong>10</strong>
+          <span>материалов</span>
+        </li>
+        <li>
+          <strong>~7</strong>
+          <span>минут на карточку</span>
+        </li>
+        <li>
+          <strong>0</strong>
+          <span>опыта нужно</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero__art" aria-hidden="true">
+      <div class="orb orb--a"></div>
+      <div class="orb orb--b"></div>
+
+      <div class="halo">
+        <div class="halo__ring"></div>
+        <div class="halo__core">
+          <span class="halo__label">выпуск</span>
+          <strong class="halo__num">01</strong>
+          <span class="halo__caption">ИИ без воды</span>
+        </div>
+      </div>
+
+      <div class="float float--a">
+        <span class="float__dot"></span>
+        <span>10 карточек</span>
+      </div>
+
+      <div class="float float--b">
+        <strong>7 мин</strong>
+        <span>на материал</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    {% for _ in range(2) %}
+      <div class="ticker__group">
+        <span>нейросети</span><span class="ticker__dot"></span>
+        <span>промпты</span><span class="ticker__dot"></span>
+        <span>без кода</span><span class="ticker__dot"></span>
+        <span>приватность</span><span class="ticker__dot"></span>
+        <span>генерация картинок</span><span class="ticker__dot"></span>
+        <span>автоматизация</span><span class="ticker__dot"></span>
+        <span>обучение</span><span class="ticker__dot"></span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<section class="section" id="cards">
+  <div class="shell">
+    <div class="section__head">
+      <div>
+        <span class="eyebrow">Подборка</span>
+        <h2 class="section__title">10 материалов, с которых начинают</h2>
+      </div>
+      <p class="section__note">
+        Каждая карточка — самостоятельный текст на 5–9 минут.
+        Читай по порядку или выбери свою тему.
+      </p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Фильтр материалов по теме">
+      <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
+      {% for category in categories %}
+        <button class="filter" type="button" data-filter="{{ category }}" aria-pressed="false">{{ category }}</button>
+      {% endfor %}
+      <span class="filters__count" data-count>{{ materials|length }} материалов</span>
+    </div>
+
+    <div class="cards">
+      {% for item in materials %}
+        <article class="card reveal"
+                 data-category="{{ item.category }}"
+                 style="--accent: {{ item.accent }}; --accent-soft: {{ item.accent_soft }}; --i: {{ loop.index0 }}">
+          <div class="card__halo" aria-hidden="true"></div>
+          <span class="card__num" aria-hidden="true">{{ "%02d"|format(loop.index) }}</span>
+
+          <div class="card__head">
+            <span class="chip">
+              <span class="chip__dot" aria-hidden="true"></span>
+              {{ item.category }}
+            </span>
+          </div>
+
+          <h3 class="card__title">{{ item.title }}</h3>
+          <p class="card__text">{{ item.subtitle }}</p>
+
+          <div class="card__meta">
+            <span class="card__level">{{ item.level }}</span>
+            <span class="card__time">{{ item.minutes }} мин</span>
+          </div>
+
+          <a class="card__btn" href="{{ url_for('material', material_id=item.id) }}">
+            <span>Открыть материал</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--subscribe" id="subscribe">
+  <div class="shell">
+    <div class="subscribe reveal">
+      <div class="subscribe__glow" aria-hidden="true"></div>
+
+      <div class="subscribe__copy">
+        <span class="eyebrow">Раз в неделю</span>
+        <h2 class="subscribe__title">Один выпуск.<br>Пять идей. Ноль воды.</h2>
+        <p>
+          Короткий дайджест для тех, кто только начинает: что нового в ИИ,
+          что попробовать и что проверить. Без хайпа и «революций».
+        </p>
+        <p class="subscribe__social">
+          <strong>{{ subscribers_count }}</strong> читателей уже получают выпуски
+        </p>
+      </div>
+
+      <form class="subscribe__form js-subscribe" action="{{ url_for('subscribe') }}" method="post" novalidate>
+        <label class="sr-only" for="email">Электронная почта</label>
+        <div class="field">
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email"
+                 placeholder="you@example.com" required>
+          <button class="btn btn--primary" type="submit">Подписаться</button>
+        </div>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+        <p class="form-note">Никакого спама. Отписка — в один клик.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

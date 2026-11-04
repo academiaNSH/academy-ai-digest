@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.title }} — Академия начальной школы{% endblock %}
+{% block description %}{{ item.subtitle }}{% endblock %}
+
+{% block content %}
+<div class="read-progress" data-progress aria-hidden="true"></div>
+
+<article class="article">
+  <div class="shell article__inner" style="--accent: {{ item.accent }}; --accent-soft: {{ item.accent_soft }}">
+
+    <a class="back" href="{{ url_for('index') }}#cards">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5M11 18l-6-6 6-6"/>
+      </svg>
+      Все материалы
+    </a>
+
+    <header class="article__head">
+      <div class="article__meta">
+        <span class="chip">
+          <span class="chip__dot" aria-hidden="true"></span>
+          {{ item.category }}
+        </span>
+        <span class="article__meta-item">{{ item.minutes }} мин чтения</span>
+        <span class="article__meta-item">{{ item.level }}</span>
+      </div>
+
+      <h1 class="article__title">{{ item.title }}</h1>
+      <p class="article__lead">{{ item.lead }}</p>
+    </header>
+
+    <div class="article__body">
+      {% for section in item.sections %}
+        <section class="prose">
+          <h2>{{ section.h }}</h2>
+          {% if section.p %}
+            <p>{{ section.p }}</p>
+          {% endif %}
+          {% if section.list %}
+            <ul>
+              {% for point in section.list %}
+                <li>{{ point }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </section>
+      {% endfor %}
+
+      <aside class="takeaways">
+        <h2>Забрать с собой</h2>
+        <ul>
+          {% for point in item.takeaways %}
+            <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      </aside>
+
+      <div class="article__cta">
+        <div>
+          <strong>Понравился формат?</strong>
+          <p>Раз в неделю — новый короткий выпуск про ИИ. Без спама.</p>
+        </div>
+        <a class="btn btn--primary" href="{{ url_for('index') }}#subscribe">Подписаться</a>
+      </div>
+
+      {% if others %}
+        <section class="related">
+          <h2 class="related__title">Читать дальше</h2>
+          <div class="related__grid">
+            {% for other in others %}
+              <a class="related__item" href="{{ url_for('material', material_id=other.id) }}"
+                 style="--accent: {{ other.accent }}; --accent-soft: {{ other.accent_soft }}">
+                <span class="chip">
+                  <span class="chip__dot" aria-hidden="true"></span>
+                  {{ other.category }}
+                </span>
+                <strong>{{ other.title }}</strong>
+                <span class="related__more">Открыть материал</span>
+              </a>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+    </div>
+
+  </div>
+</article>
+{% endblock %}

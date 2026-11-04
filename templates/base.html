@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Академия начальной школы — AI-дайджест{% endblock %}</title>
+  <meta name="description" content="{% block description %}AI-дайджест Академии начальной школы: короткие материалы про искусственный интеллект для новичков.{% endblock %}">
+  <meta name="theme-color" content="#ddf2fe">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="{{ url_for('static', filename='img/logo-64.png') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/logo-320.png') }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=3">
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="bg-aura" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="shell header__inner">
+      <a class="logo" href="{{ url_for('index') }}" aria-label="Академия начальной школы — на главную">
+        <img class="logo__img" src="{{ url_for('static', filename='img/logo-160.png') }}"
+             alt="" width="44" height="44">
+        <span class="logo__text">
+          <span class="logo__name">Академия начальной школы</span>
+          <span class="logo__tag">AI-дайджест</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="{{ url_for('index') }}#cards">Материалы</a>
+        <a href="{{ url_for('index') }}#subscribe">Подписка</a>
+        <a href="{{ url_for('index') }}#about">О выпуске</a>
+      </nav>
+
+      <a class="btn btn--small btn--primary header__cta" href="{{ url_for('index') }}#subscribe">
+        Подписаться
+      </a>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="shell footer__inner">
+      <div class="footer__brand">
+        <a class="logo logo--footer" href="{{ url_for('index') }}" aria-label="Академия начальной школы — на главную">
+          <img class="logo__img" src="{{ url_for('static', filename='img/logo-160.png') }}"
+               alt="" width="40" height="40">
+          <span class="logo__text">
+            <span class="logo__name">Академия начальной школы</span>
+            <span class="logo__tag">AI-дайджест</span>
+          </span>
+        </a>
+        <p>Подборка материалов про искусственный интеллект для тех, кто начинает с нуля.</p>
+      </div>
+
+      <div class="footer__col">
+        <h3>Разделы</h3>
+        <a href="{{ url_for('index') }}#cards">Все материалы</a>
+        <a href="{{ url_for('index') }}#subscribe">Подписка на выпуски</a>
+        <a href="{{ url_for('index') }}#about">О проекте</a>
+      </div>
+
+      <div class="footer__col">
+        <h3>О выпуске</h3>
+        <p>Дайджест готовит Академия начальной школы. Тексты пишутся людьми и проверяются по первоисточникам.</p>
+      </div>
+    </div>
+
+    <div class="shell footer__bottom">
+      <span>© 2026 Академия начальной школы</span>
+      <span>Flask · HTML · CSS · JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -17,6 +17,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from materials import CATEGORIES, MATERIALS
 from issues import ISSUES
+from typography import typograph_html
 
 ROOT = Path(__file__).parent
 TEMPLATES = ROOT / "templates"
@@ -78,7 +79,7 @@ def main():
         pages[f"vypusk-{number}.html"] = render(env, "vypusk.html", issue=issue)
 
     for name, html in pages.items():
-        (OUT / name).write_text(html, encoding="utf-8")
+        (OUT / name).write_text(typograph_html(html), encoding="utf-8")
 
     shutil.copytree(STATIC, OUT / "static", dirs_exist_ok=True)
 

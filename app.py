@@ -12,8 +12,17 @@ from flask import Flask, render_template
 
 from materials import CATEGORIES, MATERIALS
 from issues import ISSUES
+from typography import typograph_html
 
 app = Flask(__name__)
+
+
+@app.after_request
+def apply_typography(response):
+    """Расставляет неразрывные пробелы в готовом HTML перед отправкой."""
+    if response.mimetype == "text/html":
+        response.set_data(typograph_html(response.get_data(as_text=True)))
+    return response
 
 
 # Быстрый доступ к материалу по ссылке вида /material/chto-takoe-neyroset

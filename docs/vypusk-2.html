@@ -1,585 +1,585 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Выпуск 2. Подготовка урока с помощью нейросетей — Академия начальной школы</title>
-  <meta name="description" content="Пошаговый маршрут для учителя: фотография учебника, цель по ФГОС, сценарий по этапам, презентация, раздаточный материал и домашнее задание. Промпты можно копировать как есть.">
-  <meta name="theme-color" content="#ddf2fe">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Выпуск 2. Подготовка урока с помощью нейросетей — Академия начальной школы</title>
+ <meta name="description" content="Пошаговый маршрут для учителя: фотография учебника, цель по ФГОС, сценарий по этапам, презентация, раздаточный материал и домашнее задание. Промпты можно копировать как есть.">
+ <meta name="theme-color" content="#ddf2fe">
 
-  <link rel="icon" type="image/png" sizes="64x64" href="static/img/logo-64.png">
-  <link rel="apple-touch-icon" href="static/img/logo-320.png">
+ <link rel="icon" type="image/png" sizes="64x64" href="static/img/logo-64.png">
+ <link rel="apple-touch-icon" href="static/img/logo-320.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/style.css?v=3">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="static/css/style.css?v=3">
 
-  <script>document.documentElement.classList.add('js');</script>
+ <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <div class="bg-aura" aria-hidden="true"></div>
+ <div class="bg-aura" aria-hidden="true"></div>
 
-  <header class="site-header" data-header>
-    <div class="shell header__inner">
-      <a class="logo" href="index.html" aria-label="Академия начальной школы — на главную">
-        <img class="logo__img" src="static/img/logo-160.png"
+ <header class="site-header" data-header>
+ <div class="shell header__inner">
+ <a class="logo" href="index.html" aria-label="Академия начальной школы — на главную">
+ <img class="logo__img" src="static/img/logo-160.png"
              alt="" width="44" height="44">
-        <span class="logo__text">
-          <span class="logo__name">Академия начальной школы</span>
-          <span class="logo__tag">AI-дайджест</span>
-        </span>
-      </a>
+ <span class="logo__text">
+ <span class="logo__name">Академия начальной школы</span>
+ <span class="logo__tag">AI-дайджест</span>
+ </span>
+ </a>
 
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="index.html#cards">Материалы</a>
-        
-        <a href="index.html#about">О выпуске</a>
-      </nav>
+ <nav class="nav" aria-label="Основная навигация">
+ <a href="index.html#cards">Материалы</a>
+ 
+ <a href="index.html#about">О выпуске</a>
+ </nav>
 
-      <a class="btn btn--small btn--primary header__cta" href="index.html#cards">
-        К материалам
-      </a>
-    </div>
-  </header>
+ <a class="btn btn--small btn--primary header__cta" href="index.html#cards">
+ К материалам
+ </a>
+ </div>
+ </header>
 
-  <main>
-    
+ <main>
+ 
 <section class="hero hero--issue">
-  <div class="shell">
-    <span class="eyebrow reveal">Выпуск №2 · ноябрь 2026</span>
+ <div class="shell">
+ <span class="eyebrow reveal">Выпуск №2 · ноябрь 2026</span>
 
-    <h1 class="hero__title">Подготовка урока с помощью нейросетей</h1>
-    <p class="hero__lead">Пошаговый маршрут для учителя: фотография учебника, цель по ФГОС, сценарий по этапам, презентация, раздаточный материал и домашнее задание. Промпты можно копировать как есть.</p>
+ <h1 class="hero__title">Подготовка урока с помощью нейросетей</h1>
+ <p class="hero__lead">Пошаговый маршрут для учителя: фотография учебника, цель по ФГОС, сценарий по этапам, презентация, раздаточный материал и домашнее задание. Промпты можно копировать как есть.</p>
 
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="#shagi">
-        К шагам
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+ <div class="hero__actions">
+ <a class="btn btn--primary" href="#shagi">
+ К шагам
+ <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 5v14M6 13l6 6 6-6"/>
-        </svg>
-      </a>
-      <a class="btn btn--ghost" href="#polnyy-tekst">Читать целиком</a>
-    </div>
+ <path d="M12 5v14M6 13l6 6 6-6"/>
+ </svg>
+ </a>
+ <a class="btn btn--ghost" href="#polnyy-tekst">Читать целиком</a>
+ </div>
 
-    <ul class="stats">
-      <li>
-        <strong>10</strong>
-        <span>шагов</span>
-      </li>
-      <li>
-        <strong>30</strong>
-        <span>секунд на шаг</span>
-      </li>
-      <li>
-        <strong>0</strong>
-        <span>опыта нужно</span>
-      </li>
-    </ul>
-  </div>
+ <ul class="stats">
+ <li>
+ <strong>10</strong>
+ <span>шагов</span>
+ </li>
+ <li>
+ <strong>30</strong>
+ <span>секунд на шаг</span>
+ </li>
+ <li>
+ <strong>0</strong>
+ <span>опыта нужно</span>
+ </li>
+ </ul>
+ </div>
 </section>
 
 <section class="section section--steps" id="shagi">
-  <div class="shell">
-    <div class="section__head">
-      <div>
-        <span class="eyebrow">По частям</span>
-        <h2 class="section__title">Шаги выпуска</h2>
-      </div>
-      <p class="section__note">
-        Каждый шаг — отдельное окошко. Откройте нужный или читайте выпуск целиком ниже.
-      </p>
-    </div>
+ <div class="shell">
+ <div class="section__head">
+ <div>
+ <span class="eyebrow">По частям</span>
+ <h2 class="section__title">Шаги выпуска</h2>
+ </div>
+ <p class="section__note">
+ Каждый шаг — отдельное окошко. Откройте нужный или читайте выпуск целиком ниже.
+ </p>
+ </div>
 
-    <div class="cards">
-      
-        <article class="card reveal"
+ <div class="cards">
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 0">
-          <span class="card__num" aria-hidden="true">01</span>
+ <span class="card__num" aria-hidden="true">01</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 1
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 1
+ </span>
+ </div>
 
-          <h3 class="card__title">1. Выберите одну нейросеть</h3>
-          <p class="card__text">Перед началом работы выберите основную нейросеть, в которой будете готовить все материалы этапов. Работайте в диалоге последовательно и не начинайте …</p>
+ <h3 class="card__title">1. Выберите одну нейросеть</h3>
+ <p class="card__text">Перед началом работы выберите основную нейросеть, в которой будете готовить все материалы этапов. Работайте в диалоге последовательно и не начинайте …</p>
 
-          <div class="card__meta">
-            <span class="card__level">Промпты внутри</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Промпты внутри</span>
+ </div>
 
-          <a class="card__btn" href="#shag-1">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-1">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 1">
-          <span class="card__num" aria-hidden="true">02</span>
+ <span class="card__num" aria-hidden="true">02</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 2
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 2
+ </span>
+ </div>
 
-          <h3 class="card__title">2. Подготовьте базу</h3>
-          <p class="card__text">Сфотографируйте страницы учебника математики по новой теме (и рабочей тетради, если она есть), загрузите фото в выбранную нейросеть и выберите тему по КТП.</p>
+ <h3 class="card__title">2. Подготовьте базу</h3>
+ <p class="card__text">Сфотографируйте страницы учебника математики по новой теме (и рабочей тетради, если она есть), загрузите фото в выбранную нейросеть и выберите тему по КТП.</p>
 
-          <div class="card__meta">
-            <span class="card__level">Коротко</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Коротко</span>
+ </div>
 
-          <a class="card__btn" href="#shag-2">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-2">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 2">
-          <span class="card__num" aria-hidden="true">03</span>
+ <span class="card__num" aria-hidden="true">03</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 3
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 3
+ </span>
+ </div>
 
-          <h3 class="card__title">3. Цель, тип урока, планируемые результаты</h3>
-          <p class="card__text">В квадратных скобках [...] — места, куда учитель вписывает свои данные. Промпт: «Ты — учитель начальных классов. Предмет: [математика], [класс]. Тема…</p>
+ <h3 class="card__title">3. Цель, тип урока, планируемые результаты</h3>
+ <p class="card__text">В квадратных скобках [...] — места, куда учитель вписывает свои данные. Промпт: «Ты — учитель начальных классов. Предмет: [математика], [класс]. Тема…</p>
 
-          <div class="card__meta">
-            <span class="card__level">Коротко</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Коротко</span>
+ </div>
 
-          <a class="card__btn" href="#shag-3">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-3">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 3">
-          <span class="card__num" aria-hidden="true">04</span>
+ <span class="card__num" aria-hidden="true">04</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 4
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 4
+ </span>
+ </div>
 
-          <h3 class="card__title">4. Учёт особенностей класса</h3>
-          <p class="card__text">Задайте особенности класса одним сообщением до составления этапов. Нейросеть запомнит их из контекста диалога и будет учитывать во всех следующих промптах.</p>
+ <h3 class="card__title">4. Учёт особенностей класса</h3>
+ <p class="card__text">Задайте особенности класса одним сообщением до составления этапов. Нейросеть запомнит их из контекста диалога и будет учитывать во всех следующих промптах.</p>
 
-          <div class="card__meta">
-            <span class="card__level">Промпты внутри</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Промпты внутри</span>
+ </div>
 
-          <a class="card__btn" href="#shag-4">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-4">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 4">
-          <span class="card__num" aria-hidden="true">05</span>
+ <span class="card__num" aria-hidden="true">05</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 5
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 5
+ </span>
+ </div>
 
-          <h3 class="card__title">5. Сценарий урока по этапам</h3>
-          <p class="card__text">Сценарий готовится последовательно: на каждый этап — отдельный промпт. Нейросеть уже знает особенности класса. Обязательные этапы — мотивация, актуал…</p>
+ <h3 class="card__title">5. Сценарий урока по этапам</h3>
+ <p class="card__text">Сценарий готовится последовательно: на каждый этап — отдельный промпт. Нейросеть уже знает особенности класса. Обязательные этапы — мотивация, актуал…</p>
 
-          <div class="card__meta">
-            <span class="card__level">Промпты внутри</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Промпты внутри</span>
+ </div>
 
-          <a class="card__btn" href="#shag-5">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-5">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 5">
-          <span class="card__num" aria-hidden="true">06</span>
+ <span class="card__num" aria-hidden="true">06</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 6
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 6
+ </span>
+ </div>
 
-          <h3 class="card__title">6. План презентации</h3>
-          <p class="card__text">План создаётся в той же нейросети до работы в GigaChat. Промпт: «Составь план презентации к уроку по теме [тема], [класс]. Количество слайдов: [напри…</p>
+ <h3 class="card__title">6. План презентации</h3>
+ <p class="card__text">План создаётся в той же нейросети до работы в GigaChat. Промпт: «Составь план презентации к уроку по теме [тема], [класс]. Количество слайдов: [напри…</p>
 
-          <div class="card__meta">
-            <span class="card__level">Коротко</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Коротко</span>
+ </div>
 
-          <a class="card__btn" href="#shag-6">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-6">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 6">
-          <span class="card__num" aria-hidden="true">07</span>
+ <span class="card__num" aria-hidden="true">07</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 7
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 7
+ </span>
+ </div>
 
-          <h3 class="card__title">7. Создание презентации в GigaChat</h3>
-          <p class="card__text">Готовый план переносится в GigaChat почти без правок.</p>
+ <h3 class="card__title">7. Создание презентации в GigaChat</h3>
+ <p class="card__text">Готовый план переносится в GigaChat почти без правок.</p>
 
-          <div class="card__meta">
-            <span class="card__level">Промпты внутри</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Промпты внутри</span>
+ </div>
 
-          <a class="card__btn" href="#shag-7">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-7">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 7">
-          <span class="card__num" aria-hidden="true">08</span>
+ <span class="card__num" aria-hidden="true">08</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 8
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 8
+ </span>
+ </div>
 
-          <h3 class="card__title">8. Карточки раздаточного материала</h3>
-          <p class="card__text">После презентации, при необходимости, генерируем раздаточный материал. Промпт: «Составь раздаточный материал к уроку [тема, класс]: карточки для пров…</p>
+ <h3 class="card__title">8. Карточки раздаточного материала</h3>
+ <p class="card__text">После презентации, при необходимости, генерируем раздаточный материал. Промпт: «Составь раздаточный материал к уроку [тема, класс]: карточки для пров…</p>
 
-          <div class="card__meta">
-            <span class="card__level">Коротко</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Коротко</span>
+ </div>
 
-          <a class="card__btn" href="#shag-8">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-8">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 8">
-          <span class="card__num" aria-hidden="true">09</span>
+ <span class="card__num" aria-hidden="true">09</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 9
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 9
+ </span>
+ </div>
 
-          <h3 class="card__title">9. Домашнее задание</h3>
-          <p class="card__text">Целесообразное, творческое, посильное. Промпт: «Составь домашнее задание по [математике] для [класса] по теме [тема]. Творческое или практическое, по…</p>
+ <h3 class="card__title">9. Домашнее задание</h3>
+ <p class="card__text">Целесообразное, творческое, посильное. Промпт: «Составь домашнее задание по [математике] для [класса] по теме [тема]. Творческое или практическое, по…</p>
 
-          <div class="card__meta">
-            <span class="card__level">Коротко</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Коротко</span>
+ </div>
 
-          <a class="card__btn" href="#shag-9">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-9">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-        <article class="card reveal"
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ <article class="card reveal"
                  style="--accent: #2F8F7A; --accent-soft: #E1F4EE; --i: 9">
-          <span class="card__num" aria-hidden="true">10</span>
+ <span class="card__num" aria-hidden="true">10</span>
 
-          <div class="card__head">
-            <span class="chip">
-              <span class="chip__dot" aria-hidden="true"></span>
-              Шаг 10
-            </span>
-          </div>
+ <div class="card__head">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Шаг 10
+ </span>
+ </div>
 
-          <h3 class="card__title">10. Итоговая проверка фактов</h3>
-          <p class="card__text">Перед уроком проверьте факты и корректность материалов. Промпт: «Проверь мои материалы к уроку [математика, тема, класс] на ошибки: 1) правильность м…</p>
+ <h3 class="card__title">10. Итоговая проверка фактов</h3>
+ <p class="card__text">Перед уроком проверьте факты и корректность материалов. Промпт: «Проверь мои материалы к уроку [математика, тема, класс] на ошибки: 1) правильность м…</p>
 
-          <div class="card__meta">
-            <span class="card__level">Коротко</span>
-          </div>
+ <div class="card__meta">
+ <span class="card__level">Коротко</span>
+ </div>
 
-          <a class="card__btn" href="#shag-10">
-            <span>Открыть шаг</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="card__btn" href="#shag-10">
+ <span>Открыть шаг</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-      
-    </div>
-  </div>
+ <path d="M5 12h14M13 6l6 6-6 6"/>
+ </svg>
+ </a>
+ </article>
+ 
+ </div>
+ </div>
 </section>
 
 <article class="article" id="polnyy-tekst">
-  <div class="shell article__inner" style="--accent: #2F8F7A; --accent-soft: #E1F4EE">
+ <div class="shell article__inner" style="--accent: #2F8F7A; --accent-soft: #E1F4EE">
 
-    <a class="back" href="index.html#cards">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+ <a class="back" href="index.html#cards">
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M19 12H5M11 18l-6-6 6-6"/>
-      </svg>
-      Материалы выпуска 1
-    </a>
+ <path d="M19 12H5M11 18l-6-6 6-6"/>
+ </svg>
+ Материалы выпуска 1
+ </a>
 
-    <header class="article__head">
-      <div class="article__meta">
-        <span class="chip">
-          <span class="chip__dot" aria-hidden="true"></span>
-          Выпуск 2
-        </span>
-        <span class="article__meta-item">ноябрь 2026</span>
-        <span class="article__meta-item">Полный текст</span>
-      </div>
+ <header class="article__head">
+ <div class="article__meta">
+ <span class="chip">
+ <span class="chip__dot" aria-hidden="true"></span>
+ Выпуск 2
+ </span>
+ <span class="article__meta-item">ноябрь 2026</span>
+ <span class="article__meta-item">Полный текст</span>
+ </div>
 
-      <h2 class="article__title">Выпуск целиком</h2>
-      <p class="article__lead">Десять шагов: от выбора нейросети до проверки фактов перед уроком.</p>
-    </header>
+ <h2 class="article__title">Выпуск целиком</h2>
+ <p class="article__lead">Десять шагов: от выбора нейросети до проверки фактов перед уроком.</p>
+ </header>
 
-    <div class="article__body">
-      
-        <section class="prose" id="shag-1">
-          <h2>1. Выберите одну нейросеть</h2>
-          
-            <p>Перед началом работы выберите основную нейросеть, в которой будете готовить все материалы этапов. Работайте в диалоге последовательно и не начинайте новый, пока подготовка не завершена.</p>
-          
-          
-            <ul>
-              
-                <li>Дипсик (DeepSeek) — много текстовых материалов: промпты, сценарий, рефлексия, домашнее задание. Удобен для пошаговой генерации и уточнений.</li>
-              
-                <li>Алиса — быстрые короткие запросы, удобна для мобильной работы и простых генераций.</li>
-              
-            </ul>
-          
-        </section>
-      
-        <section class="prose" id="shag-2">
-          <h2>2. Подготовьте базу</h2>
-          
-            <p>Сфотографируйте страницы учебника математики по новой теме (и рабочей тетради, если она есть), загрузите фото в выбранную нейросеть и выберите тему по КТП.</p>
-          
-          
-        </section>
-      
-        <section class="prose" id="shag-3">
-          <h2>3. Цель, тип урока, планируемые результаты</h2>
-          
-            <p>В квадратных скобках [...] — места, куда учитель вписывает свои данные. Промпт: «Ты — учитель начальных классов. Предмет: [математика], [класс]. Тема: [тема]. Тип урока (оставь нужный): урок открытия нового знания / комбинированный / урок закрепления и обобщения / урок контроля знаний / урок-игра или путешествие. Сформулируй цель урока по ФГОС НОО, предметные планируемые результаты возьми из ФРП по предмету НОО».</p>
-          
-          
-        </section>
-      
-        <section class="prose" id="shag-4">
-          <h2>4. Учёт особенностей класса</h2>
-          
-            <p>Задайте особенности класса одним сообщением до составления этапов. Нейросеть запомнит их из контекста диалога и будет учитывать во всех следующих промптах.</p>
-          
-          
-            <ul>
-              
-                <li>«Запомни особенности моего класса: [количество учеников, сильные и слабые, дети с трудностями, гиперактивные и т. п.]. Учитывай это во всех следующих заданиях: дифференцируй (отдельно для сильных и слабых), добавляй групповую и парную работу, самооценку на каждом этапе».</li>
-              
-                <li>Важно: не начинайте новый диалог после этого шага, иначе память о классе потеряется.</li>
-              
-            </ul>
-          
-        </section>
-      
-        <section class="prose" id="shag-5">
-          <h2>5. Сценарий урока по этапам</h2>
-          
-            <p>Сценарий готовится последовательно: на каждый этап — отдельный промпт. Нейросеть уже знает особенности класса. Обязательные этапы — мотивация, актуализация, открытие нового знания, первичное закрепление, рефлексия.</p>
-          
-          
-            <ul>
-              
-                <li>Мотивация, 3–5 мин: «Составь этап мотивации для урока [математики, класс, тема]. Эмоциональный настрой, игровая ситуация, загадка или проблемный вопрос, чтобы заинтересовать детей».</li>
-              
-                <li>Актуализация знаний, 5–7 мин: «Составь этап актуализации знаний по теме [тема]. Небольшая работа с проверкой на доске, повторение пройденного, самопроверка, покажи решения на слайде».</li>
-              
-                <li>Открытие нового знания, 15–18 мин: «Составь этап изучения новой темы. Запрещён монолог учителя! 4–5 смен деятельности: работа с учебником, в парах, у доски, практическая работа. Включи физминутку. Конкретные реплики учителя и действия детей».</li>
-              
-                <li>Первичное закрепление, 5–7 мин: «Составь этап закрепления по теме урока. Короткое практическое задание на время, элементы функциональной грамотности (связь с жизнью). Дифференцируй: задания для сильных и слабых».</li>
-              
-                <li>Рефлексия, 4–5 мин: «Составь педагогическую рефлексию для урока: 3–4 задания на предметные результаты с критериями и ответами для самопроверки на слайде, и выводы — что закрепить дальше».</li>
-              
-            </ul>
-          
-        </section>
-      
-        <section class="prose" id="shag-6">
-          <h2>6. План презентации</h2>
-          
-            <p>План создаётся в той же нейросети до работы в GigaChat. Промпт: «Составь план презентации к уроку по теме [тема], [класс]. Количество слайдов: [например, 10–12]. Для каждого слайда укажи: название, визуал (картинка, схема, пример), текст (минимум текста). Обязательно включи слайд: тема и цель, этапы урока, примеры и задачи для актуализации, критерии самопроверки на рефлексии. Готово для вставки в GigaChat».</p>
-          
-          
-        </section>
-      
-        <section class="prose" id="shag-7">
-          <h2>7. Создание презентации в GigaChat</h2>
-          
-            <p>Готовый план переносится в GigaChat почти без правок.</p>
-          
-          
-            <ul>
-              
-                <li>Откройте GigaChat → Проекты → «Создать презентацию».</li>
-              
-                <li>Скопируйте план презентации из шага 6 в поле запроса.</li>
-              
-                <li>Выберите количество слайдов.</li>
-              
-                <li>Сгенерируйте, при необходимости поправьте шаблон, выгрузите презентацию и доработайте её в файле на компьютере.</li>
-              
-            </ul>
-          
-        </section>
-      
-        <section class="prose" id="shag-8">
-          <h2>8. Карточки раздаточного материала</h2>
-          
-            <p>После презентации, при необходимости, генерируем раздаточный материал. Промпт: «Составь раздаточный материал к уроку [тема, класс]: карточки для проверки актуализации (с проверкой на доске), карточки-задания для этапа закрепления (вариации для сильных и слабых), карточки для рефлексии и самооценки. Готово к распечатке».</p>
-          
-          
-        </section>
-      
-        <section class="prose" id="shag-9">
-          <h2>9. Домашнее задание</h2>
-          
-            <p>Целесообразное, творческое, посильное. Промпт: «Составь домашнее задание по [математике] для [класса] по теме [тема]. Творческое или практическое, посильное, связывающее тему с жизнью, 1–2 варианта на выбор. Задание не должно быть на зубрёжку. Готово к записи в дневник».</p>
-          
-          
-        </section>
-      
-        <section class="prose" id="shag-10">
-          <h2>10. Итоговая проверка фактов</h2>
-          
-            <p>Перед уроком проверьте факты и корректность материалов. Промпт: «Проверь мои материалы к уроку [математика, тема, класс] на ошибки: 1) правильность математических вычислений и примеров в сценарии, презентации и домашнем задании; 2) соответствие планируемых результатов и заданий этапам; 3) наличие всех этапов урока (мотивация, актуализация, открытие нового, закрепление, физминутка, рефлексия, самооценка). Найди и исправь ошибки».</p>
-          
-          
-        </section>
-      
+ <div class="article__body">
+ 
+ <section class="prose" id="shag-1">
+ <h2>1. Выберите одну нейросеть</h2>
+ 
+ <p>Перед началом работы выберите основную нейросеть, в которой будете готовить все материалы этапов. Работайте в диалоге последовательно и не начинайте новый, пока подготовка не завершена.</p>
+ 
+ 
+ <ul>
+ 
+ <li>Дипсик (DeepSeek) — много текстовых материалов: промпты, сценарий, рефлексия, домашнее задание. Удобен для пошаговой генерации и уточнений.</li>
+ 
+ <li>Алиса — быстрые короткие запросы, удобна для мобильной работы и простых генераций.</li>
+ 
+ </ul>
+ 
+ </section>
+ 
+ <section class="prose" id="shag-2">
+ <h2>2. Подготовьте базу</h2>
+ 
+ <p>Сфотографируйте страницы учебника математики по новой теме (и рабочей тетради, если она есть), загрузите фото в выбранную нейросеть и выберите тему по КТП.</p>
+ 
+ 
+ </section>
+ 
+ <section class="prose" id="shag-3">
+ <h2>3. Цель, тип урока, планируемые результаты</h2>
+ 
+ <p>В квадратных скобках [...] — места, куда учитель вписывает свои данные. Промпт: «Ты — учитель начальных классов. Предмет: [математика], [класс]. Тема: [тема]. Тип урока (оставь нужный): урок открытия нового знания / комбинированный / урок закрепления и обобщения / урок контроля знаний / урок-игра или путешествие. Сформулируй цель урока по ФГОС НОО, предметные планируемые результаты возьми из ФРП по предмету НОО».</p>
+ 
+ 
+ </section>
+ 
+ <section class="prose" id="shag-4">
+ <h2>4. Учёт особенностей класса</h2>
+ 
+ <p>Задайте особенности класса одним сообщением до составления этапов. Нейросеть запомнит их из контекста диалога и будет учитывать во всех следующих промптах.</p>
+ 
+ 
+ <ul>
+ 
+ <li>«Запомни особенности моего класса: [количество учеников, сильные и слабые, дети с трудностями, гиперактивные и т. п.]. Учитывай это во всех следующих заданиях: дифференцируй (отдельно для сильных и слабых), добавляй групповую и парную работу, самооценку на каждом этапе».</li>
+ 
+ <li>Важно: не начинайте новый диалог после этого шага, иначе память о классе потеряется.</li>
+ 
+ </ul>
+ 
+ </section>
+ 
+ <section class="prose" id="shag-5">
+ <h2>5. Сценарий урока по этапам</h2>
+ 
+ <p>Сценарий готовится последовательно: на каждый этап — отдельный промпт. Нейросеть уже знает особенности класса. Обязательные этапы — мотивация, актуализация, открытие нового знания, первичное закрепление, рефлексия.</p>
+ 
+ 
+ <ul>
+ 
+ <li>Мотивация, 3–5 мин: «Составь этап мотивации для урока [математики, класс, тема]. Эмоциональный настрой, игровая ситуация, загадка или проблемный вопрос, чтобы заинтересовать детей».</li>
+ 
+ <li>Актуализация знаний, 5–7 мин: «Составь этап актуализации знаний по теме [тема]. Небольшая работа с проверкой на доске, повторение пройденного, самопроверка, покажи решения на слайде».</li>
+ 
+ <li>Открытие нового знания, 15–18 мин: «Составь этап изучения новой темы. Запрещён монолог учителя! 4–5 смен деятельности: работа с учебником, в парах, у доски, практическая работа. Включи физминутку. Конкретные реплики учителя и действия детей».</li>
+ 
+ <li>Первичное закрепление, 5–7 мин: «Составь этап закрепления по теме урока. Короткое практическое задание на время, элементы функциональной грамотности (связь с жизнью). Дифференцируй: задания для сильных и слабых».</li>
+ 
+ <li>Рефлексия, 4–5 мин: «Составь педагогическую рефлексию для урока: 3–4 задания на предметные результаты с критериями и ответами для самопроверки на слайде, и выводы — что закрепить дальше».</li>
+ 
+ </ul>
+ 
+ </section>
+ 
+ <section class="prose" id="shag-6">
+ <h2>6. План презентации</h2>
+ 
+ <p>План создаётся в той же нейросети до работы в GigaChat. Промпт: «Составь план презентации к уроку по теме [тема], [класс]. Количество слайдов: [например, 10–12]. Для каждого слайда укажи: название, визуал (картинка, схема, пример), текст (минимум текста). Обязательно включи слайд: тема и цель, этапы урока, примеры и задачи для актуализации, критерии самопроверки на рефлексии. Готово для вставки в GigaChat».</p>
+ 
+ 
+ </section>
+ 
+ <section class="prose" id="shag-7">
+ <h2>7. Создание презентации в GigaChat</h2>
+ 
+ <p>Готовый план переносится в GigaChat почти без правок.</p>
+ 
+ 
+ <ul>
+ 
+ <li>Откройте GigaChat → Проекты → «Создать презентацию».</li>
+ 
+ <li>Скопируйте план презентации из шага 6 в поле запроса.</li>
+ 
+ <li>Выберите количество слайдов.</li>
+ 
+ <li>Сгенерируйте, при необходимости поправьте шаблон, выгрузите презентацию и доработайте её в файле на компьютере.</li>
+ 
+ </ul>
+ 
+ </section>
+ 
+ <section class="prose" id="shag-8">
+ <h2>8. Карточки раздаточного материала</h2>
+ 
+ <p>После презентации, при необходимости, генерируем раздаточный материал. Промпт: «Составь раздаточный материал к уроку [тема, класс]: карточки для проверки актуализации (с проверкой на доске), карточки-задания для этапа закрепления (вариации для сильных и слабых), карточки для рефлексии и самооценки. Готово к распечатке».</p>
+ 
+ 
+ </section>
+ 
+ <section class="prose" id="shag-9">
+ <h2>9. Домашнее задание</h2>
+ 
+ <p>Целесообразное, творческое, посильное. Промпт: «Составь домашнее задание по [математике] для [класса] по теме [тема]. Творческое или практическое, посильное, связывающее тему с жизнью, 1–2 варианта на выбор. Задание не должно быть на зубрёжку. Готово к записи в дневник».</p>
+ 
+ 
+ </section>
+ 
+ <section class="prose" id="shag-10">
+ <h2>10. Итоговая проверка фактов</h2>
+ 
+ <p>Перед уроком проверьте факты и корректность материалов. Промпт: «Проверь мои материалы к уроку [математика, тема, класс] на ошибки: 1) правильность математических вычислений и примеров в сценарии, презентации и домашнем задании; 2) соответствие планируемых результатов и заданий этапам; 3) наличие всех этапов урока (мотивация, актуализация, открытие нового, закрепление, физминутка, рефлексия, самооценка). Найди и исправь ошибки».</p>
+ 
+ 
+ </section>
+ 
 
-      <aside class="takeaways">
-        <h2>Забрать с собой</h2>
-        <ul>
-          
-            <li>Одна нейросеть и один диалог на весь урок — так она помнит класс и контекст.</li>
-          
-            <li>Промпты идут по этапам: от цели до рефлексии, а не одним большим запросом.</li>
-          
-            <li>Особенности класса вводятся один раз и дальше учитываются во всех заданиях.</li>
-          
-            <li>Перед уроком проверяем вычисления, планируемые результаты и наличие всех этапов.</li>
-          
-        </ul>
-      </aside>
+ <aside class="takeaways">
+ <h2>Забрать с собой</h2>
+ <ul>
+ 
+ <li>Одна нейросеть и один диалог на весь урок — так она помнит класс и контекст.</li>
+ 
+ <li>Промпты идут по этапам: от цели до рефлексии, а не одним большим запросом.</li>
+ 
+ <li>Особенности класса вводятся один раз и дальше учитываются во всех заданиях.</li>
+ 
+ <li>Перед уроком проверяем вычисления, планируемые результаты и наличие всех этапов.</li>
+ 
+ </ul>
+ </aside>
 
-      <div class="article__cta">
-        <div>
-          <strong>Это отдельный выпуск</strong>
-          <p>В выпуске 1 — десять коротких материалов про ИИ для новичков.</p>
-        </div>
-        <a class="btn btn--primary" href="index.html#cards">К выпуску 1</a>
-      </div>
-    </div>
+ <div class="article__cta">
+ <div>
+ <strong>Это отдельный выпуск</strong>
+ <p>В выпуске 1 — десять коротких материалов про ИИ для новичков.</p>
+ </div>
+ <a class="btn btn--primary" href="index.html#cards">К выпуску 1</a>
+ </div>
+ </div>
 
-  </div>
+ </div>
 </article>
 
-  </main>
+ </main>
 
-  <footer class="site-footer" id="about">
-    <div class="shell footer__inner">
-      <div class="footer__brand">
-        <a class="logo logo--footer" href="index.html" aria-label="Академия начальной школы — на главную">
-          <img class="logo__img" src="static/img/logo-160.png"
+ <footer class="site-footer" id="about">
+ <div class="shell footer__inner">
+ <div class="footer__brand">
+ <a class="logo logo--footer" href="index.html" aria-label="Академия начальной школы — на главную">
+ <img class="logo__img" src="static/img/logo-160.png"
                alt="" width="40" height="40">
-          <span class="logo__text">
-            <span class="logo__name">Академия начальной школы</span>
-            <span class="logo__tag">AI-дайджест</span>
-          </span>
-        </a>
-        <p>Подборка материалов про искусственный интеллект для учителей, которые начинают с нуля.</p>
-      </div>
+ <span class="logo__text">
+ <span class="logo__name">Академия начальной школы</span>
+ <span class="logo__tag">AI-дайджест</span>
+ </span>
+ </a>
+ <p>Подборка материалов про искусственный интеллект для учителей, которые начинают с нуля.</p>
+ </div>
 
-      <div class="footer__col">
-        <h3>Разделы</h3>
-        <a href="index.html#cards">Все материалы</a>
-        
-        <a href="index.html#about">О проекте</a>
-      </div>
+ <div class="footer__col">
+ <h3>Разделы</h3>
+ <a href="index.html#cards">Все материалы</a>
+ 
+ <a href="index.html#about">О проекте</a>
+ </div>
 
-      <div class="footer__col">
-        <h3>О выпуске</h3>
-        <p>Дайджест готовит Академия начальной школы. Тексты пишутся людьми и проверяются по первоисточникам.</p>
-      </div>
-    </div>
+ <div class="footer__col">
+ <h3>О выпуске</h3>
+ <p>Дайджест готовит Академия начальной школы. Тексты пишутся людьми и проверяются по первоисточникам.</p>
+ </div>
+ </div>
 
-    <div class="shell footer__bottom">
-      <span>© 2026 Академия начальной школы</span>
-      <span>Flask · HTML · CSS · JavaScript</span>
-    </div>
-  </footer>
+ <div class="shell footer__bottom">
+ <span>© 2026 Академия начальной школы</span>
+ <span>Flask · HTML · CSS · JavaScript</span>
+ </div>
+ </footer>
 
-  <script src="static/js/main.js"></script>
+ <script src="static/js/main.js"></script>
 </body>
 </html>

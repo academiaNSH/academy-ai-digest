@@ -11,6 +11,7 @@
 from flask import Flask, jsonify, render_template, request
 
 from materials import CATEGORIES, MATERIALS
+from issues import ISSUES
 
 app = Flask(__name__)
 
@@ -32,6 +33,7 @@ def index():
         materials=MATERIALS,
         categories=CATEGORIES,
         subscribers_count=format_count(BASE_SUBSCRIBERS + len(SUBSCRIBERS)),
+        issues=list(ISSUES.values()),
     )
 
 
@@ -44,6 +46,15 @@ def material(material_id):
 
     others = [m for m in MATERIALS if m["id"] != material_id][:3]
     return render_template("material.html", item=item, others=others)
+
+
+@app.route("/vypusk/<int:number>")
+def vypusk(number):
+    """Отдельная страница тематического выпуска (например, выпуск 2)."""
+    issue = ISSUES.get(number)
+    if issue is None:
+        return render_template("404.html"), 404
+    return render_template("vypusk.html", issue=issue)
 
 
 @app.route("/subscribe", methods=["POST"])

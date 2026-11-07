@@ -16,6 +16,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from materials import CATEGORIES, MATERIALS
+from issues import ISSUES
 
 ROOT = Path(__file__).parent
 TEMPLATES = ROOT / "templates"
@@ -42,6 +43,8 @@ def url_for(endpoint, **values):
         return "index.html"
     if endpoint == "material":
         return f"material-{values['material_id']}.html"
+    if endpoint == "vypusk":
+        return f"vypusk-{values['number']}.html"
     if endpoint == "subscribe":
         return "#subscribe"
     raise ValueError(f"Неизвестный маршрут: {endpoint}")
@@ -70,6 +73,7 @@ def main():
             materials=MATERIALS,
             categories=CATEGORIES,
             subscribers_count=format_count(BASE_SUBSCRIBERS),
+            issues=list(ISSUES.values()),
         ),
         "404.html": render(env, "404.html"),
     }
@@ -79,6 +83,9 @@ def main():
         pages[f"material-{item['id']}.html"] = render(
             env, "material.html", item=item, others=others
         )
+
+    for number, issue in ISSUES.items():
+        pages[f"vypusk-{number}.html"] = render(env, "vypusk.html", issue=issue)
 
     for name, html in pages.items():
         (OUT / name).write_text(html, encoding="utf-8")

@@ -1021,6 +1021,56 @@ input:focus-visible {
   color: var(--muted);
 }
 
+/* 9.5. Анонс отдельного выпуска ------------------------------------------- */
+.section--issue {
+  padding-top: clamp(20px, 3vw, 34px);
+  padding-bottom: 0;
+}
+
+.issue-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: clamp(22px, 3vw, 32px);
+  border-radius: 26px;
+  border: 2px dashed rgba(47, 143, 122, 0.45);
+  background: linear-gradient(120deg, #eefaf5, #ffffff 62%);
+  box-shadow: var(--shadow-sm);
+}
+
+.issue-banner__text {
+  max-width: 58ch;
+}
+
+.issue-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #2f8f7a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.issue-banner h3 {
+  margin: 12px 0 6px;
+  font-size: clamp(19px, 2.2vw, 24px);
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.issue-banner p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+}
+
 /* 10. Страница материала -------------------------------------------------- */
 .read-progress {
   position: fixed;
@@ -1538,6 +1588,15 @@ input:focus-visible {
   }
 
   .article__cta .btn {
+    width: 100%;
+  }
+
+  .issue-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .issue-banner .btn {
     width: 100%;
   }
 }

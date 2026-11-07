@@ -19,6 +19,10 @@ app = Flask(__name__)
 # Быстрый доступ к материалу по ссылке вида /material/chto-takoe-neyroset
 MATERIALS_BY_ID = {item["id"]: item for item in MATERIALS}
 
+# Порядок материалов: «Читать дальше» ведёт к следующим по списку.
+MATERIAL_ORDER = {item["id"]: index for index, item in enumerate(MATERIALS)}
+
+
 @app.route("/")
 def index():
     """Главная страница: герой-блок и карточки материалов."""
@@ -37,7 +41,8 @@ def material(material_id):
     if item is None:
         return render_template("404.html"), 404
 
-    others = [m for m in MATERIALS if m["id"] != material_id][:3]
+    start = MATERIAL_ORDER[material_id]
+    others = [MATERIALS[(start + step) % len(MATERIALS)] for step in (1, 2, 3)]
     return render_template("material.html", item=item, others=others)
 
 

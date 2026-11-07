@@ -68,8 +68,8 @@ def main():
         "404.html": render(env, "404.html"),
     }
 
-    for item in MATERIALS:
-        others = [m for m in MATERIALS if m["id"] != item["id"]][:3]
+    for index, item in enumerate(MATERIALS):
+        others = [MATERIALS[(index + step) % len(MATERIALS)] for step in (1, 2, 3)]
         pages[f"material-{item['id']}.html"] = render(
             env, "material.html", item=item, others=others
         )

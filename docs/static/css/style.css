@@ -1071,6 +1071,28 @@ input:focus-visible {
   color: var(--ink-soft);
 }
 
+/* 9.6. Страница выпуска: шаги-окошки -------------------------------------- */
+.hero--issue .hero__title {
+  max-width: 22ch;
+}
+
+.hero--issue {
+  padding-bottom: clamp(14px, 2vw, 24px);
+}
+
+.hero--issue .hero__lead {
+  max-width: 62ch;
+}
+
+.section--steps {
+  padding-top: clamp(24px, 4vw, 48px);
+  padding-bottom: clamp(12px, 2vw, 20px);
+}
+
+.section--steps .section__title {
+  max-width: 24ch;
+}
+
 /* 10. Страница материала -------------------------------------------------- */
 .read-progress {
   position: fixed;
@@ -1165,6 +1187,7 @@ input:focus-visible {
 
 .prose {
   margin-bottom: clamp(26px, 3vw, 36px);
+  scroll-margin-top: 100px;
 }
 
 .prose h2 {

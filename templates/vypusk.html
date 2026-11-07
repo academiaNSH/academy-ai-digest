@@ -4,7 +4,87 @@
 {% block description %}{{ issue.lead }}{% endblock %}
 
 {% block content %}
-<article class="article">
+<section class="hero hero--issue">
+  <div class="shell">
+    <span class="eyebrow reveal">Выпуск №{{ issue.number }} · {{ issue.date }}</span>
+
+    <h1 class="hero__title">{{ issue.title }}</h1>
+    <p class="hero__lead">{{ issue.lead }}</p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#shagi">
+        К шагам
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14M6 13l6 6 6-6"/>
+        </svg>
+      </a>
+      <a class="btn btn--ghost" href="#polnyy-tekst">Читать целиком</a>
+    </div>
+
+    <ul class="stats">
+      <li>
+        <strong>{{ issue.sections|length }}</strong>
+        <span>шагов</span>
+      </li>
+      <li>
+        <strong>30</strong>
+        <span>секунд на шаг</span>
+      </li>
+      <li>
+        <strong>0</strong>
+        <span>опыта нужно</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--steps" id="shagi">
+  <div class="shell">
+    <div class="section__head">
+      <div>
+        <span class="eyebrow">По частям</span>
+        <h2 class="section__title">Шаги выпуска</h2>
+      </div>
+      <p class="section__note">
+        Каждый шаг — отдельное окошко. Открой нужный или читай выпуск целиком ниже.
+      </p>
+    </div>
+
+    <div class="cards">
+      {% for section in issue.sections %}
+        <article class="card reveal"
+                 style="--accent: {{ issue.accent }}; --accent-soft: {{ issue.accent_soft }}; --i: {{ loop.index0 }}">
+          <span class="card__num" aria-hidden="true">{{ "%02d"|format(loop.index) }}</span>
+
+          <div class="card__head">
+            <span class="chip">
+              <span class="chip__dot" aria-hidden="true"></span>
+              Шаг {{ loop.index }}
+            </span>
+          </div>
+
+          <h3 class="card__title">{{ section.h }}</h3>
+          <p class="card__text">{{ section.p|truncate(150, true, '…') }}</p>
+
+          <div class="card__meta">
+            <span class="card__level">{% if section.list %}Промпты внутри{% else %}Коротко{% endif %}</span>
+          </div>
+
+          <a class="card__btn" href="#shag-{{ loop.index }}">
+            <span>Открыть шаг</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<article class="article" id="polnyy-tekst">
   <div class="shell article__inner" style="--accent: {{ issue.accent }}; --accent-soft: {{ issue.accent_soft }}">
 
     <a class="back" href="{{ url_for('index') }}#cards">
@@ -22,16 +102,16 @@
           Выпуск {{ issue.number }}
         </span>
         <span class="article__meta-item">{{ issue.date }}</span>
-        <span class="article__meta-item">{{ issue.sections|length }} шагов</span>
+        <span class="article__meta-item">Полный текст</span>
       </div>
 
-      <h1 class="article__title">{{ issue.title }}</h1>
-      <p class="article__lead">{{ issue.lead }}</p>
+      <h2 class="article__title">Выпуск целиком</h2>
+      <p class="article__lead">{{ issue.subtitle }}</p>
     </header>
 
     <div class="article__body">
       {% for section in issue.sections %}
-        <section class="prose">
+        <section class="prose" id="shag-{{ loop.index }}">
           <h2>{{ section.h }}</h2>
           {% if section.p %}
             <p>{{ section.p }}</p>

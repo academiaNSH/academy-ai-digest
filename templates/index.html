@@ -33,7 +33,6 @@
             <path d="M5 12h14M13 6l6 6-6 6"/>
           </svg>
         </a>
-        <a class="btn btn--ghost" href="#subscribe">Получать выпуски</a>
       </div>
 
       <ul class="stats">
@@ -170,37 +169,6 @@
           </a>
         </article>
       {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section section--subscribe" id="subscribe">
-  <div class="shell">
-    <div class="subscribe reveal">
-      <div class="subscribe__glow" aria-hidden="true"></div>
-
-      <div class="subscribe__copy">
-        <span class="eyebrow">Раз в месяц</span>
-        <h2 class="subscribe__title">Один выпуск.<br>Пять идей. Ноль воды.</h2>
-        <p>
-          Короткий дайджест для тех, кто только начинает: что нового в ИИ,
-          что попробовать и что проверить. Без хайпа и «революций».
-        </p>
-        <p class="subscribe__social">
-          <strong>{{ subscribers_count }}</strong> читателей уже получают выпуски
-        </p>
-      </div>
-
-      <form class="subscribe__form js-subscribe" action="{{ url_for('subscribe') }}"{% if static_version %} data-static="1"{% endif %} method="post" novalidate>
-        <label class="sr-only" for="email">Электронная почта</label>
-        <div class="field">
-          <input id="email" name="email" type="email" inputmode="email" autocomplete="email"
-                 placeholder="you@example.com" required>
-          <button class="btn btn--primary" type="submit">Подписаться</button>
-        </div>
-        <p class="form-msg" role="status" aria-live="polite"></p>
-        <p class="form-note">Никакого спама. Отписка — в один клик.</p>
-      </form>
     </div>
   </div>
 </section>

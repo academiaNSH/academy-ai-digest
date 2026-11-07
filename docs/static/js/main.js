@@ -1,6 +1,6 @@
 /* Нейродайджест — вся логика страницы.
    Разделы: 1) шапка  2) появление блоков  3) фильтр карточек
-            4) форма подписки  5) прогресс чтения                    */
+            4) прогресс чтения                                      */
 
 (function () {
   "use strict";
@@ -80,69 +80,7 @@
     });
   });
 
-  /* 4. Подписка: отправляем email без перезагрузки страницы --------------- */
-  var forms = document.querySelectorAll(".js-subscribe");
-
-  forms.forEach(function (form) {
-    var input = form.querySelector('input[type="email"]');
-    var button = form.querySelector("button");
-    var message = form.querySelector(".form-msg");
-
-    /* На GitHub Pages нет сервера: честно говорим об этом вместо ошибки сети */
-    if (form.dataset.static === "1") {
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        message.classList.remove("is-ok", "is-error");
-        message.textContent =
-          "Это статическая версия сайта: подписка работает в версии на Flask.";
-      });
-      return;
-    }
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      message.textContent = "";
-      message.classList.remove("is-ok", "is-error");
-
-      if (!input.value.trim()) {
-        message.textContent = "Введите email — иначе некуда отправлять выпуски.";
-        message.classList.add("is-error");
-        input.focus();
-        return;
-      }
-
-      button.disabled = true;
-      var label = button.textContent;
-      button.textContent = "Отправляю…";
-
-      fetch(form.action, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: input.value.trim() }),
-      })
-        .then(function (response) {
-          return response.json().then(function (data) {
-            return { ok: response.ok, data: data };
-          });
-        })
-        .then(function (result) {
-          message.textContent = result.data.message;
-          message.classList.add(result.data.ok ? "is-ok" : "is-error");
-          if (result.data.ok) form.reset();
-        })
-        .catch(function () {
-          message.textContent = "Сеть подвела. Попробуйте ещё раз через минуту.";
-          message.classList.add("is-error");
-        })
-        .finally(function () {
-          button.disabled = false;
-          button.textContent = label;
-        });
-    });
-  });
-
-  /* 5. Полоса прогресса чтения на странице материала ---------------------- */
+  /* 4. Полоса прогресса чтения на странице материала ---------------------- */
   var progress = document.querySelector("[data-progress]");
 
   function updateProgress() {

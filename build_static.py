@@ -23,13 +23,6 @@ TEMPLATES = ROOT / "templates"
 STATIC = ROOT / "static"
 OUT = ROOT / "docs"
 
-BASE_SUBSCRIBERS = 1247
-
-
-def format_count(number):
-    """1247 -> '1 247' — так же, как на серверной версии."""
-    return f"{number:,}".replace(",", " ")
-
 
 def url_for(endpoint, **values):
     """Повторяет Flask url_for, но возвращает пути к статическим файлам.
@@ -45,8 +38,6 @@ def url_for(endpoint, **values):
         return f"material-{values['material_id']}.html"
     if endpoint == "vypusk":
         return f"vypusk-{values['number']}.html"
-    if endpoint == "subscribe":
-        return "#subscribe"
     raise ValueError(f"Неизвестный маршрут: {endpoint}")
 
 
@@ -72,7 +63,6 @@ def main():
             "index.html",
             materials=MATERIALS,
             categories=CATEGORIES,
-            subscribers_count=format_count(BASE_SUBSCRIBERS),
             issues=list(ISSUES.values()),
         ),
         "404.html": render(env, "404.html"),

@@ -34,12 +34,11 @@
       <nav class="nav" aria-label="Основная навигация">
         <a href="{{ url_for('index') }}#cards">Материалы</a>
         <a href="{{ url_for('vypusk', number=2) }}">Выпуск 2</a>
-        <a href="{{ url_for('index') }}#subscribe">Подписка</a>
         <a href="{{ url_for('index') }}#about">О выпуске</a>
       </nav>
 
-      <a class="btn btn--small btn--primary header__cta" href="{{ url_for('index') }}#subscribe">
-        Подписаться
+      <a class="btn btn--small btn--primary header__cta" href="{{ url_for('index') }}#cards">
+        К материалам
       </a>
     </div>
   </header>
@@ -65,7 +64,7 @@
       <div class="footer__col">
         <h3>Разделы</h3>
         <a href="{{ url_for('index') }}#cards">Все материалы</a>
-        <a href="{{ url_for('index') }}#subscribe">Подписка на выпуски</a>
+        <a href="{{ url_for('vypusk', number=2) }}">Выпуск 2</a>
         <a href="{{ url_for('index') }}#about">О проекте</a>
       </div>
 

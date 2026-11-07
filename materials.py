@@ -124,6 +124,11 @@ MATERIALS = [
                     "и мобильные сценарии.",
                     "DeepSeek — китайская модель: сильна в длинных текстах и пошаговых рассуждениях.",
                 ],
+                "links": [
+                    {"label": "GigaChat", "url": "https://giga.chat/"},
+                    {"label": "Алиса AI", "url": "https://alice.yandex.ru/"},
+                    {"label": "DeepSeek", "url": "https://chat.deepseek.com/"},
+                ],
             },
             {
                 "h": "На что смотреть при выборе",

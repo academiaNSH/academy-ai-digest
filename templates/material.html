@@ -45,6 +45,15 @@
               {% endfor %}
             </ul>
           {% endif %}
+          {% if section.links %}
+            <ul class="prose__links">
+              {% for link in section.links %}
+                <li>
+                  <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </section>
       {% endfor %}
 

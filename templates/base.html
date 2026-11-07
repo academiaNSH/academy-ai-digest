@@ -33,7 +33,7 @@
 
       <nav class="nav" aria-label="Основная навигация">
         <a href="{{ url_for('index') }}#cards">Материалы</a>
-        <a href="{{ url_for('vypusk', number=2) }}">Выпуск 2</a>
+        {# Пункт «Выпуск 2» скрыт временно: <a href="{{ url_for('vypusk', number=2) }}">Выпуск 2</a> #}
         <a href="{{ url_for('index') }}#about">О выпуске</a>
       </nav>
 
@@ -64,7 +64,7 @@
       <div class="footer__col">
         <h3>Разделы</h3>
         <a href="{{ url_for('index') }}#cards">Все материалы</a>
-        <a href="{{ url_for('vypusk', number=2) }}">Выпуск 2</a>
+        {# Ссылка на выпуск 2 скрыта временно: <a href="{{ url_for('vypusk', number=2) }}">Выпуск 2</a> #}
         <a href="{{ url_for('index') }}#about">О проекте</a>
       </div>
 

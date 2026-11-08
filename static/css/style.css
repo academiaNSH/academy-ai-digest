@@ -1535,6 +1535,43 @@ input:focus-visible {
   color: var(--muted);
 }
 
+/* 12.5. Уведомление о cookie ---------------------------------------------- */
+.cookie-note {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 70;
+  display: none;
+  align-items: center;
+  gap: 16px;
+  width: min(680px, calc(100% - 24px));
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 2px dashed rgba(46, 150, 234, 0.4);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 20px 40px -24px rgba(15, 73, 116, 0.9);
+  transform: translateX(-50%);
+}
+
+.cookie-note.is-visible {
+  display: flex;
+}
+
+.cookie-note p {
+  margin: 0;
+  flex: 1 1 auto;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 560px) {
+  .cookie-note {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}
+
 /* 13. Анимации ------------------------------------------------------------ */
 /* Появление элементов при скролле (класс .js ставится в <head>) */
 .js .reveal {

@@ -1,6 +1,6 @@
 /* Нейродайджест — вся логика страницы.
    Разделы: 1) шапка  2) появление блоков  3) фильтр карточек
-            4) прогресс чтения                                      */
+            4) прогресс чтения  5) уведомление о cookie                */
 
 (function () {
   "use strict";
@@ -95,5 +95,33 @@
     updateProgress();
     window.addEventListener("scroll", updateProgress, { passive: true });
     window.addEventListener("resize", updateProgress);
+  }
+
+  /* 5. Уведомление о cookie ----------------------------------------------- */
+  var cookieNote = document.querySelector("[data-cookie-note]");
+
+  if (cookieNote) {
+    var accepted = null;
+    try {
+      accepted = localStorage.getItem("cookie-ok");
+    } catch (error) {
+      accepted = null;
+    }
+
+    if (!accepted) {
+      cookieNote.classList.add("is-visible");
+    }
+
+    var cookieButton = cookieNote.querySelector("[data-cookie-accept]");
+    if (cookieButton) {
+      cookieButton.addEventListener("click", function () {
+        cookieNote.classList.remove("is-visible");
+        try {
+          localStorage.setItem("cookie-ok", "1");
+        } catch (error) {
+          /* приватный режим — просто скрываем уведомление */
+        }
+      });
+    }
   }
 })();
